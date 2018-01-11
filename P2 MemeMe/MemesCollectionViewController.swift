@@ -20,14 +20,13 @@ class MemesCollectionViewController: UIViewController, UICollectionViewDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(addMeme))
+        let space:CGFloat = 3
+        let mHeight = (view.frame.size.height - (2 * space))
+        let mWidth = (view.frame.size.width - (2 * space))
         
-        let space:CGFloat = 1.2
-        let dimension = (view.frame.size.width - (2 * space)) / 3.0
-        
-        layoutFlow?.minimumInteritemSpacing = 1.0
+        layoutFlow?.minimumInteritemSpacing = space
         layoutFlow?.minimumLineSpacing = space
-        layoutFlow?.itemSize = CGSize(width: dimension, height: dimension)
-        print("\(layoutFlow?.itemSize)")
+        layoutFlow?.itemSize = CGSize(width: mWidth/3, height: mHeight/5)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +50,8 @@ class MemesCollectionViewController: UIViewController, UICollectionViewDelegate,
         myCustomCell.upperText.text = currentItem.topText
        myCustomCell.lowerText.text = currentItem.lowerText
         myCustomCell.memeImage.image = currentItem.memedImage.memeImage
+        myCustomCell.layer.borderWidth = 1.0
+        myCustomCell.layer.borderColor = UIColor.gray.cgColor
         return myCustomCell
         
     }

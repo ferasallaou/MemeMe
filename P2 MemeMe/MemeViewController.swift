@@ -47,8 +47,6 @@ class MemeViewController: UIViewController{
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
-        appDelegate.memes.append(meme)
-        appDelegate.memes.append(meme)
         return meme
     }
     
