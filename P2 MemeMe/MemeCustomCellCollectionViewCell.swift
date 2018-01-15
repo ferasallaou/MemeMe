@@ -11,8 +11,7 @@ import UIKit
 class MemeCustomCellCollectionViewCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var upperText: UILabel!
-    @IBOutlet weak var lowerText: UILabel!
-    @IBOutlet weak var memeImage: UIImageView!
+   
+@IBOutlet weak var memeImage: UIImageView!
     
 }

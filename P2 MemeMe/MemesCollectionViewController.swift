@@ -47,8 +47,6 @@ class MemesCollectionViewController: UIViewController, UICollectionViewDelegate,
 
         let myCustomCell = collectionView.dequeueReusableCell(withReuseIdentifier: "memeCustomCell", for: indexPath) as! MemeCustomCellCollectionViewCell
         let currentItem = memes[indexPath.row]
-        myCustomCell.upperText.text = currentItem.topText
-       myCustomCell.lowerText.text = currentItem.lowerText
         myCustomCell.memeImage.image = currentItem.memedImage.memeImage
         myCustomCell.layer.borderWidth = 1.0
         myCustomCell.layer.borderColor = UIColor.gray.cgColor
