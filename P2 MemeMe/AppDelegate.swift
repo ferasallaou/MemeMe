@@ -10,7 +10,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    // Code Review is Done Via Feras Allaou :) // 23/Jan/2018
     var window: UIWindow?
     var memes = [MemeViewController.MemeObj]()
     
